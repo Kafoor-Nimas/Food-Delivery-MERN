@@ -50,6 +50,7 @@ const registerUser = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.json({ success: false, message: "error" });
+    //Now user register api is succefull now move to login
   }
 };
 
