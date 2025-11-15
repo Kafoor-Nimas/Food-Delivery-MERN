@@ -31,6 +31,11 @@
     padding-left: 40%;
   }
 }
+.sidebar .active {
+  background-color: #fff0ed;
+  border-color: tomato;
+}
+
 @media (max-width: 400px) {
   .sidebar-option p {
     display: none;
