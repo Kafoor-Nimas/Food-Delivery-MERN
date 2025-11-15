@@ -6,6 +6,10 @@ import validator from "validator";
 //login user
 const loginUser = async (req, res) => {};
 
+const createToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET);
+};
+
 //register user
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
