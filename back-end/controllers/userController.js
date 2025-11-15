@@ -28,6 +28,10 @@ const registerUser = async (req, res) => {
         message: "Please enter a strong password",
       });
     }
+    //Hashing user password using bcrypt
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
   } catch (error) {}
 };
 
