@@ -33,7 +33,7 @@ const listFood = async (req, res) => {
   }
 };
 
-//remove ffod item
+//remove food item
 const removeFood = async (req, res) => {
   try {
     const food = await foodModel.findById(req.body.id); //remove a food item from both the database and the uploads folder
