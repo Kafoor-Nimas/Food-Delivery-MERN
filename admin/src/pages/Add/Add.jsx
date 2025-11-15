@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./Add.css";
 import { assets } from "../../assets/assets";
 
@@ -15,10 +15,19 @@ const Add = () => {
     const value = event.target.value;
     setData((prevData) => ({ ...prevData, [name]: value }));
   };
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("description", data.description);
+    formData.append("price", Number(data.price));
+    formData.append("category", data.category);
+    formData.append("image", image);
+  };
 
   return (
     <div className="add">
-      <form className="flex-col">
+      <form className="flex-col" onSubmit={onSubmitHandler}>
         <div className="add-img-upload flex-col">
           <p>Upload Image</p>
           <label htmlFor="image">
