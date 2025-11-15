@@ -1,11 +1,12 @@
-import React, {  useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
+import axios from "axios";
 
 const LoginPopup = ({ setShowLogin }) => {
-  const {url} =useContext(StoreContext)
-  const [currentState, setCurrentState] = useState("Sign Up");
+  const { url } = useContext(StoreContext);
+  const [currentState, setCurrentState] = useState("Login");
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -18,9 +19,20 @@ const LoginPopup = ({ setShowLogin }) => {
     setData((prevdata) => ({ ...prevdata, [name]: value }));
   };
 
+  const onLogin = async (event) => {
+    event.preventDefault();
+    let newUrl = url;
+    if (currentState === "Login") {
+      newUrl += "/api/user/login";
+    } else {
+      newUrl += "/api/user/register";
+    }
+    const response = await axios.post(newUrl, data);
+  };
+
   return (
     <div className="login-popup">
-      <form className="login-popup-container">
+      <form onSubmit={onLogin} className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currentState}</h2>
           <img
@@ -60,7 +72,7 @@ const LoginPopup = ({ setShowLogin }) => {
             required
           />
         </div>
-        <button>
+        <button type="submit">
           {currentState === "Sign Up" ? "Create account" : "Login"}
         </button>
         <div className="login-popup-condition">
