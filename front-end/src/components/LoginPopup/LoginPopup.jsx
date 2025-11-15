@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, {  useContext, useState } from "react";
 import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
+import { StoreContext } from "../../context/StoreContext";
 
 const LoginPopup = ({ setShowLogin }) => {
+  const {url} =useContext(StoreContext)
   const [currentState, setCurrentState] = useState("Sign Up");
   const [data, setData] = useState({
     name: "",
@@ -15,6 +17,7 @@ const LoginPopup = ({ setShowLogin }) => {
     const value = event.target.value;
     setData((prevdata) => ({ ...prevdata, [name]: value }));
   };
+
   return (
     <div className="login-popup">
       <form className="login-popup-container">
