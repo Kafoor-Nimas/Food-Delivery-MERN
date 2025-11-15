@@ -22,7 +22,7 @@ const List = () => {
   return (
     <div className="list add flex-col">
       <p>All Doods List</p>
-      <div className="list-table">
+      <div className="list-table-format title">
         <b>Image</b>
         <b>Name</b>
         <b>Category</b>
@@ -36,7 +36,7 @@ const List = () => {
             <p>{item.name}</p>
             <p>{item.category}</p>
             <p>${item.price}</p>
-            <p>X</p>
+            <p className="cursor">X</p>
           </div>
         );
       })}
