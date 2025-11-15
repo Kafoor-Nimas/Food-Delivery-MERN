@@ -7,6 +7,28 @@ import validator from "validator";
 const loginUser = async (req, res) => {};
 
 //register user
-const registerUser = async (req, res) => {};
+const registerUser = async (req, res) => {
+  const { name, email, password } = req.body;
+  try {
+    const exist = await userModel.findOne({ email });
+    if (exist) {
+      //checking is user already exist
+      return res.json({ success: false, message: "User Already exists" });
+    }
+    //validating email format & strong password
+    if (!validator.isEmail(email)) {
+      return res.json({
+        success: false,
+        message: "Please enter a valid email",
+      });
+    }
+    if (password.length < 8) {
+      return res.json({
+        success: false,
+        message: "Please enter a strong password",
+      });
+    }
+  } catch (error) {}
+};
 
 export { loginUser, registerUser };
