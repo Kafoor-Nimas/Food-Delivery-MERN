@@ -34,6 +34,13 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
+  // when we reaload the web page we will not get logout
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
+
   const contextValue = {
     food_list,
     cartItems,
