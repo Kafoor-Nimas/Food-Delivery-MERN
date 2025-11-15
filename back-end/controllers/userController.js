@@ -15,7 +15,13 @@ const loginUser = async (req, res) => {
     if (!isMatch) {
       return res.json({ success: false, message: "Invalid credentials" });
     }
-  } catch (error) {}
+    //Create a token
+    const token = createToken(user._id);
+    return res.json({ success: true, token });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
 };
 
 const createToken = (id) => {
