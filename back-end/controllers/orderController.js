@@ -16,7 +16,7 @@ const placeOrder = async (req, res) => {
     });
     await newOrder.save();
     await userModel.findByIdAndUpdate(req.body.userId, { cardData: {} });
-
+    //line item is essential for stripe payment
     const line_items = req.body.items.map((item) => ({
       price_data: {
         currency: "usd", //can be lkr
@@ -49,6 +49,9 @@ const placeOrder = async (req, res) => {
       cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
     });
     res.json({ success: true, session_url: session.url });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
 };
 export { placeOrder };
