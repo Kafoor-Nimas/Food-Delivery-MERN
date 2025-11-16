@@ -4,13 +4,13 @@ import { assets } from "../../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = ({url}) => {
+const Add = ({ url }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
     description: "",
     price: "",
-    category: "Salad",
+    category: "",
   });
   const onChangeHadldler = (event) => {
     const name = event.target.name;
@@ -25,7 +25,7 @@ const Add = ({url}) => {
     formData.append("price", Number(data.price));
     formData.append("category", data.category);
     formData.append("image", image);
-    
+
     try {
       const response = await axios.post(`${url}/api/food/add`, formData);
       if (response.data.success) {
@@ -33,7 +33,7 @@ const Add = ({url}) => {
           name: "",
           description: "",
           price: "",
-          category: "Salad",
+          category: "",
         });
         setImage(false);
         toast.success(response.data.message);
