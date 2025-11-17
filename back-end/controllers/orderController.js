@@ -55,6 +55,8 @@ const placeOrder = async (req, res) => {
   }
 };
 
+//verify order
+
 const verifyOrder = async (req, res) => {
   const { orderId, success } = req.body;
   try {
@@ -70,4 +72,16 @@ const verifyOrder = async (req, res) => {
     res.json({ success: false, message: "Error" });
   }
 };
-export { placeOrder, verifyOrder };
+
+//user orders for front-end
+const userOrders = async (req, res) => {
+  try {
+    const orders = await orderModel.find({ userId: req.body.userId }); //userId come from authmidle
+    res.json({ success: true, data: orders });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+export { placeOrder, verifyOrder, userOrders };
