@@ -54,4 +54,8 @@ const placeOrder = async (req, res) => {
     res.json({ success: false, message: "Error" });
   }
 };
-export { placeOrder };
+
+const verifyOrder =async (req,res)=>{
+
+}
+export { placeOrder ,verifyOrder };
