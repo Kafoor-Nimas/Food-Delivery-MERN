@@ -82,15 +82,19 @@ STRIPE_SECRET_KEY=your_stripe_key
 📸 Screenshots
 
 Home Page
+
 ![Tomato Homepage](./screenShots/full-page.png)
 
 Cart Page
+
 ![Tomato CartPage](./screenShots/full-page-cart.png)
 
 Checkout & Place-order Page
-![Tomato PlaceOrder](./screenShots/full-page-place-orde.png)
+
+![Tomato PlaceOrder](./screenShots/place-order.png)
 
 Admin-panel Page
+
 ![Tomato Admin-Panel](./screenShots/admin-panel.png)
 
 ## 🚀 Deployment
