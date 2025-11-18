@@ -43,7 +43,7 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 - MongoDB
 - npm
 
-- **Live Demo**: [https://food-delivery-mern-theta.vercel.app/]
+  **Live Demo**: [https://food-delivery-mern-theta.vercel.app/]
 
 ### Clone the repository
 
@@ -108,6 +108,8 @@ Admin-panel Page
 **Kafoor Nimas**
 
 - GitHub: [@Kafoor-Nimas](https://github.com/Kafoor-Nimas)
+- LinkedIn: [Your Name](https://linkedin.com/in/nimas-kafoor)
+- Email: nimaskafoor@gmail.com
 
 ## 📝 License
 
