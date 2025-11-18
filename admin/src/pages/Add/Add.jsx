@@ -10,7 +10,7 @@ const Add = ({ url }) => {
     name: "",
     description: "",
     price: "",
-    category: "",
+    category: "Salad",
   });
   const onChangeHadldler = (event) => {
     const name = event.target.name;
@@ -33,7 +33,7 @@ const Add = ({ url }) => {
           name: "",
           description: "",
           price: "",
-          category: "",
+          category: data.category,
         });
         setImage(false);
         toast.success(response.data.message);
@@ -88,7 +88,11 @@ const Add = ({ url }) => {
         <div className="add-category-price">
           <div className="add-category flex-col">
             <p>Product category</p>
-            <select name="category" onChange={onChangeHadldler}>
+            <select
+              name="category"
+              onChange={onChangeHadldler}
+              value={data.category}
+            >
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
               <option value="Deserts">Deserts</option>
