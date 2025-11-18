@@ -107,8 +107,8 @@ Admin-panel Page
 
 **Kafoor Nimas**
 
-- GitHub: [@Kafoor-Nimas](https://github.com/Kafoor-Nimas)
-- LinkedIn: [Your Name](https://linkedin.com/in/nimas-kafoor)
+- GitHub: [@Nimas](https://github.com/Kafoor-Nimas)
+- LinkedIn: [Nimas](https://linkedin.com/in/nimas-kafoor)
 - Email: nimaskafoor@gmail.com
 
 ## 📝 License
