@@ -1,19 +1,17 @@
-# 🍕 FoodHub - MERN Food Delivery App
+# 🍕 Tomato - MERN Food Delivery App
 
 A full-stack food delivery platform built with MongoDB, Express.js, React, and Node.js.
 
-![FoodExpress Homepage](./screenShots/homepage.png)
+![Tomato Homepage](./screenShots/homepage.png)
 
 ## ✨ Features
 
 - 🔐 User authentication (JWT)
-- 🍽️ Browse restaurants and menus
 - 🛒 Shopping cart functionality
 - 💳 Secure payment integration
 - 📱 Responsive design
 - 👨‍💼 Admin dashboard
 - 📦 Order tracking
-- ⭐ Restaurant ratings & reviews
 
 ## 🛠️ Tech Stack
 
@@ -23,7 +21,6 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 - React Router
 - Context API / Redux
 - Axios
-- Tailwind CSS / Material-UI
 
 **Backend:**
 
@@ -36,7 +33,7 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 
 **Payment:**
 
-- Stripe / Razorpay
+- Stripe
 
 ## 📦 Installation
 
@@ -44,13 +41,15 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 
 - Node.js (v14+)
 - MongoDB
-- npm or yarn
+- npm
+
+- **Live Demo**: [https://food-delivery-mern-theta.vercel.app/]
 
 ### Clone the repository
 
 ```bash
-git clone https://github.com/Kafoor-Nimas/food-delivery.git
-cd food-delivery
+git clone https://github.com/Kafoor-Nimas/Food-Delivery-MERN.git
+cd Food-del
 ```
 
 ### Backend Setup
@@ -60,13 +59,13 @@ cd backend
 npm install
 cp .env.example .env
 # Add your environment variables
-npm start
+npm run server
 ```
 
 ### Frontend Setup
 
 ```bash
-cd frontend
+cd front-end
 npm install
 npm run dev
 ```
@@ -76,15 +75,14 @@ npm run dev
 Create `.env` file in backend directory:
 
 ```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET_KEY=your_stripe_key
 ```
 
-## 📸 Screenshots
+📸 Screenshots
 
-[Add screenshots here]
+Home Page
+![Tomato Homepage](./screenShots/full-page.png)
 
 ## 🚀 Deployment
 
