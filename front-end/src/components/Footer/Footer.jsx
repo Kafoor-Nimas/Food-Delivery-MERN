@@ -9,10 +9,7 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
-            dignissimos qui, sequi distinctio fugiat corporis libero quos! In
-            voluptate aliquam eos iste, architecto necessitatibus accusantium
-            tempora adipisci incidunt dolorum suscipit possimus voluptatem.
+            DelishDrop is your trusted online food delivery partner, bringing your favorite meals straight to your doorstep with speed and convenience. Built with the MERN stack for reliability and performance, our platform ensures a smooth browsing and ordering experience. From local restaurants to premium cuisines, we connect you with the best flavors around you. Order now and enjoy fresh, delicious food delivered with care — anytime, anywhere.
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
