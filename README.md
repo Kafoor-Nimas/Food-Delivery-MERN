@@ -114,6 +114,8 @@ Admin-panel Page
 - Backend: Render
 - Database: MongoDB Atlas
 
+💡 **For Recruiters:** Full backend code is available in the repository. Happy to demonstrate the complete application running locally or discuss deployment solutions.
+
 ## 👨‍💻 Author
 
 **Kafoor Nimas**
