@@ -35,6 +35,17 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 
 - Stripe
 
+## 🔄 Project Status
+
+- ✅ Frontend: Fully developed & deployed
+- ✅ Backend: Fully developed & tested locally
+- ⏳ Backend Deployment: Pending (working on hosting solution)
+- ⏳ Full-stack Integration: Ready once backend is deployed
+
+## 💻 Run Locally (Full Stack)
+
+To run the complete application with backend:
+
 ## 📦 Installation
 
 ### Prerequisites
@@ -43,7 +54,7 @@ A full-stack food delivery platform built with MongoDB, Express.js, React, and N
 - MongoDB
 - npm
 
-  **Live Demo**: [https://food-delivery-mern-theta.vercel.app/]
+  **Live Demo**: [https://food-delivery-mern-1rg4.vercel.app/?]
 
 ### Clone the repository
 
@@ -99,8 +110,8 @@ Admin-panel Page
 
 ## 🚀 Deployment
 
-- Frontend: Vercel / Netlify
-- Backend: Render / Railway / Heroku
+- Frontend: Vercel
+- Backend: Render
 - Database: MongoDB Atlas
 
 ## 👨‍💻 Author
